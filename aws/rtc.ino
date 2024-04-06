@@ -10,3 +10,9 @@ void rtcBegin() {
     Serial.println("RTC init complete");
   }
 }
+
+void setTimeAuto() {
+  #ifdef RESET_TIME
+    rtc.setTime(BUILD_SEC + SEC_ADD, BUILD_MIN, BUILD_HOUR, BUILD_DAY, BUILD_MONTH, BUILD_YEAR);
+  #endif
+}

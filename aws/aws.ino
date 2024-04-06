@@ -1,5 +1,6 @@
 //#define ERASE_EEPROM
 #define RESET_TIME
+#define SEC_ADD 14
 
 #define btn_ok 7
 #define btn_down 5
@@ -57,6 +58,7 @@ void setup() {
   digitalWrite(relay2_pin, RELAY_LOW);
 
   rtcBegin();
+  setTimeAuto();
 }
 
 void loop() {
